@@ -35,3 +35,8 @@ pd_add_external(rngs_ensemble~ "${CMAKE_CURRENT_SOURCE_DIR}/rngs_ensemble/rngs_e
 pd_add_external(rngs_reverb~ "${CMAKE_CURRENT_SOURCE_DIR}/rngs_reverb/rngs_reverb~.cpp" LINK_LIBRARIES MILib)
 pd_add_external(wrps~ "${CMAKE_CURRENT_SOURCE_DIR}/wrps/wrps~.cpp" LINK_LIBRARIES MILib)
 
+# install all pd patches on repository
+file(GLOB_RECURSE PD_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.pd")
+pd_add_datafile(wrps~ "${PD_FILES}")
+
+
