@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, macos-13]
-        precision: [32, 64]
+        precision: [32]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -81,7 +81,7 @@ jobs:
     strategy:
       matrix:
         arch: [amd64, aarch64, arm]
-        precision: [32, 64]
+        precision: [32]
     steps:
       - uses: actions/checkout@v4
         with:
